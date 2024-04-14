@@ -41,7 +41,7 @@ function ChatBot() {
           value={question}
           onChange={(e) => setQuestion(e.target.value)}
           className="chatbot-textarea"
-          placeholder='Ask a Question'
+          placeholder='Ask any Doubts regarding this Website'
           rows="6"
           cols="30"
         ></textarea>
