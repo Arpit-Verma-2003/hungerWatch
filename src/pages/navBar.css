@@ -1,0 +1,20 @@
+/* Dynamic CSS variables */
+:root {
+  --navbar-background-color: #f0f0f0; /* Subtle gray background */
+  --nav-link-color: #333; /* Dark gray link color */
+  --nav-link-hover-color: #666; /* Slightly lighter hover color */
+}
+
+/* Styles for the navbar links */
+.nav-link {
+  padding: 10px;
+  margin: 0 5px;
+  text-decoration: none;
+  color: var(--nav-link-color); /* Use dynamic link color */
+  transition: color 0.3s ease; /* Smooth transition on color change */
+}
+
+/* Hover effect for navbar links */
+.nav-link:hover {
+  color: var(--nav-link-hover-color); /* Use dynamic hover color */
+}

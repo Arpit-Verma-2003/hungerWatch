@@ -1,0 +1,41 @@
+/* Location.css */
+
+.location-container {
+    background-color: #f9fafb;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    max-width: 400px;
+    margin: 0 auto;
+  }
+  
+  .location-container h1 {
+    font-size: 24px;
+    margin-bottom: 10px;
+  }
+  
+  .location-container h2 {
+    font-size: 18px;
+    margin-bottom: 20px;
+  }
+  
+  .location-details {
+    margin-bottom: 20px;
+  }
+  
+  .location-details p {
+    margin-bottom: 8px;
+  }
+  
+  .loading {
+    color: #555;
+    font-style: italic;
+    margin-top: 10px;
+  }
+  
+  .error {
+    color: #c0392b;
+    margin-top: 10px;
+  }
+  
