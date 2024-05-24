@@ -14,8 +14,9 @@ const Location = () => {
 
   const getLocation = async () => {
     try {
-      const location = await axios.get("https://ipapi.co/json");
-      setCurrLocation(location.data);
+      const location = await axios.get("https://nominatim.openstreetmap.org/reverse?format=jsonv2&lat=28.667856&lon=77.449791");
+      console.log(location);
+      setCurrLocation(location.data.address);
     } catch (e) {
       setError(true);
     } finally {
@@ -28,9 +29,10 @@ const Location = () => {
       <h1>Your Location Details</h1>
       <h2>(Posts Would be Displayed According To Your Location)</h2>
       <div className="location-details">
+        {/* <p><strong>Residence:</strong>{currLocation.residential}</p> */}
         <p><strong>City:</strong> {currLocation.city}</p>
-        <p><strong>State:</strong> {currLocation.region}</p>
-        <p><strong>Country:</strong> {currLocation.country_name}</p>
+        <p><strong>State:</strong> {currLocation.state}</p>
+        <p><strong>Country:</strong> {currLocation.country}</p>
         <p><strong>Connection:</strong> {currLocation.org}</p>
       </div>
       {isLoading && <div className="loading">Loading...</div>}

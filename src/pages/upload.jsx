@@ -128,8 +128,8 @@ const Upload = () => {
 
   const getLocation = async () => {
     try {
-      const location = await axios.get("https://ipapi.co/json");
-      setCurrLocation(location.data);
+      const location = await axios.get("https://nominatim.openstreetmap.org/reverse?format=jsonv2&lat=28.667856&lon=77.449791");
+      setCurrLocation(location.data.address);
     } catch (e) {
       setError(e);
     } finally {
@@ -206,10 +206,10 @@ const Upload = () => {
         </button>
         <br /> <br />
         <button onClick={getDocumentsByQuery} className="upload-button">
-          Only Show {/*currLocation.city*/"Greater Noida"} Posts
+          Only Show {currLocation.city} Posts
         </button>
         <br />
-        <h1>Wanna Volunteer ? Recent Need Posts Near Greater Noida - </h1>
+        <h1>Wanna Volunteer ? Recent Need Posts Near {currLocation.city} - </h1>
         {data.map((value) => (
           <div key={value.id} className="post-container">
             <img src={value.proof} className="post-image" alt="" />

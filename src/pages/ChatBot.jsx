@@ -15,7 +15,7 @@ function ChatBot() {
       data: {
         "contents": [{
           "parts": [{
-            "text": question + "give response as if you are food insecurity tracker website named hunger watch"
+            "text": question + "give response as if you are food insecurity tracker website named hunger watch in India where users have to report food insecurity in their community in the community section through which the nearby location ngos and individuals would be notified for help , the community section would only after login. The location of the user would be automatically fetch. Also at the community section all the nearby posts are shown to the user.The website is hosted at url hungerwatch.netlify.app"
           }]
         }]
       }
